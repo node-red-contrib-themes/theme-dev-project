@@ -1,0 +1,12 @@
+{
+    "name": "theme-dev-project",
+    "description": "Node-RED project to help with theme creation and maintenance",
+    "version": "0.0.1",
+    "dependencies": {},
+    "node-red": {
+        "settings": {
+            "flowFile": "flow.json",
+            "credentialsFile": "flow_cred.json"
+        }
+    }
+}
