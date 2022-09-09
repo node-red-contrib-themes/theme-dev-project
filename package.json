@@ -3,7 +3,7 @@
     "description": "Node-RED project to help with theme creation and maintenance",
     "version": "0.1.0",
     "dependencies": {
-        "node-red-dashboard": "latest"
+        "node-red-dashboard": "3.2.0"
     },
     "node-red": {
         "settings": {
