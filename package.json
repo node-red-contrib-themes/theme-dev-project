@@ -3,7 +3,7 @@
     "description": "Node-RED project to help with theme creation and maintenance",
     "version": "0.1.0",
     "dependencies": {
-        "node-red-dashboard": "3.6.0"
+        "@flowforge/node-red-dashboard": "0.3.0"
     },
     "node-red": {
         "settings": {
