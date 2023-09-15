@@ -796,11 +796,11 @@
         "label": "text",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "className": "",
         "style": false,
         "font": "",
         "fontSize": 16,
         "color": "#000000",
+        "className": "",
         "x": 70,
         "y": 840,
         "wires": []
@@ -815,10 +815,25 @@
         "order": 9007199254740991,
         "chartType": "line",
         "xAxisType": "linear",
+        "removeOlder": "5",
+        "removeOlderUnit": "60",
+        "removeOlderPoints": "",
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
         "width": 0,
         "height": 0,
+        "className": "",
         "x": 70,
-        "y": 880,
+        "y": 920,
         "wires": [
             []
         ]
@@ -834,7 +849,7 @@
         "height": 0,
         "content": "# Markdown Content\n\nGoes here...",
         "x": 90,
-        "y": 920,
+        "y": 1000,
         "wires": [
             []
         ]
@@ -855,10 +870,45 @@
         "templateScope": "local",
         "className": "",
         "x": 80,
-        "y": 960,
+        "y": 1040,
         "wires": [
             []
         ]
+    },
+    {
+        "id": "36a5785d6a03fd97",
+        "type": "ui-table",
+        "z": "c7000847999bd2cf",
+        "group": "b02c2bc5a89b478b",
+        "name": "",
+        "label": "text",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "maxrows": 0,
+        "autocols": true,
+        "columns": [],
+        "x": 70,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "d57a721e9cd519d4",
+        "type": "ui-notification",
+        "z": "c7000847999bd2cf",
+        "ui": "88b1772b3c4a1d59",
+        "position": "top right",
+        "displayTime": "3",
+        "showCountdown": true,
+        "outputs": 0,
+        "allowDismiss": true,
+        "dismissText": "Close",
+        "raw": false,
+        "className": "",
+        "name": "",
+        "x": 110,
+        "y": 960,
+        "wires": []
     },
     {
         "id": "9e16fe1427c2fd6c",
