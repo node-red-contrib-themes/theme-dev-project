@@ -45,9 +45,7 @@
             "e588158b12a04653"
         ],
         "x": 34,
-        "y": 59,
-        "w": 472,
-        "h": 122
+        "y": 59
     },
     {
         "id": "88b1772b3c4a1d59",
@@ -203,6 +201,7 @@
         "name": "",
         "func": "// Randomly throw an error rather than\n// pass on message.\nif (Math.random() < 0.5) {\n    node.error(\"a random error\", msg);\n} else {\n    return msg;\n}",
         "outputs": 1,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -277,6 +276,7 @@
         "name": "",
         "func": "node.warn(\"Something happened you should know about\");\nreturn msg;",
         "outputs": 1,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -313,6 +313,7 @@
         "name": "",
         "func": "node.error(\"Oh no, something bad happened\", msg);\nreturn msg;",
         "outputs": 1,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -424,6 +425,7 @@
         "name": "",
         "func": "node.log(\"Oh no, something bad happened\");\nreturn msg;",
         "outputs": 1,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -500,6 +502,7 @@
         "name": "",
         "func": "node.status({fill:\"red\",shape:\"ring\",text:\"Test\"});",
         "outputs": 1,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -517,6 +520,7 @@
         "name": "",
         "func": "node.status({fill:\"green\",shape:\"ring\",text:\"Test\"});",
         "outputs": 1,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -534,6 +538,7 @@
         "name": "",
         "func": "node.status({fill:\"blue\",shape:\"ring\",text:\"Test\"});",
         "outputs": 1,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -551,6 +556,7 @@
         "name": "",
         "func": "node.status({fill:\"grey\",shape:\"ring\",text:\"Test\"});",
         "outputs": 1,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -568,6 +574,7 @@
         "name": "",
         "func": "node.status({fill:\"yellow\",shape:\"ring\",text:\"Test\"});",
         "outputs": 1,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -909,6 +916,25 @@
         "x": 110,
         "y": 960,
         "wires": []
+    },
+    {
+        "id": "55d54d1c275c150f",
+        "type": "function",
+        "z": "c7000847999bd2cf",
+        "name": "Test mermaid markdown",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 60,
+        "wires": [
+            []
+        ],
+        "info": "```mermaid\nstateDiagram-v2\nState_1 --> State_2: Transition 1\nState_2 --> State_3: Another transition\nState_3 --> State_1: Back to \\nthe start\n```"
     },
     {
         "id": "9e16fe1427c2fd6c",
