@@ -45,7 +45,9 @@
             "e588158b12a04653"
         ],
         "x": 34,
-        "y": 59
+        "y": 59,
+        "w": 472,
+        "h": 122
     },
     {
         "id": "88b1772b3c4a1d59",
@@ -82,8 +84,7 @@
         "page": "4b7c3fd52199a3be",
         "width": "6",
         "height": "1",
-        "order": -1,
-        "disp": true
+        "order": -1
     },
     {
         "id": "8fa49657b233d311",
@@ -935,6 +936,18 @@
             []
         ],
         "info": "```mermaid\nstateDiagram-v2\nState_1 --> State_2: Transition 1\nState_2 --> State_3: Another transition\nState_3 --> State_1: Back to \\nthe start\n```"
+    },
+    {
+        "id": "ebe56150c2df2d4f",
+        "type": "ui-event",
+        "z": "c7000847999bd2cf",
+        "ui": "88b1772b3c4a1d59",
+        "name": "",
+        "x": 80,
+        "y": 1080,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "9e16fe1427c2fd6c",
