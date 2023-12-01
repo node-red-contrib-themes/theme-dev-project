@@ -950,6 +950,19 @@
         ]
     },
     {
+        "id": "a916d4a8fd74405c",
+        "type": "ui-control",
+        "z": "c7000847999bd2cf",
+        "name": "",
+        "ui": "88b1772b3c4a1d59",
+        "events": "all",
+        "x": 80,
+        "y": 1120,
+        "wires": [
+            []
+        ]
+    },
+    {
         "id": "9e16fe1427c2fd6c",
         "type": "inject",
         "z": "64d45d3401d649ae",
