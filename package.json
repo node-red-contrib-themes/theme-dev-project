@@ -3,7 +3,7 @@
     "description": "Node-RED project to help with theme creation and maintenance",
     "version": "0.1.0",
     "dependencies": {
-        "@flowfuse/node-red-dashboard": "0.9.2"
+        "@flowfuse/node-red-dashboard": "0.10.0"
     },
     "node-red": {
         "settings": {
