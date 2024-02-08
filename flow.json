@@ -880,7 +880,7 @@
         "content": "# Markdown Content\n\nGoes here...",
         "className": "",
         "x": 90,
-        "y": 1000,
+        "y": 1040,
         "wires": [
             []
         ]
@@ -903,7 +903,7 @@
         "templateScope": "local",
         "className": "",
         "x": 80,
-        "y": 1040,
+        "y": 1080,
         "wires": [
             []
         ]
@@ -942,7 +942,7 @@
         "className": "",
         "name": "",
         "x": 110,
-        "y": 960,
+        "y": 1000,
         "wires": []
     },
     {
@@ -971,7 +971,7 @@
         "ui": "88b1772b3c4a1d59",
         "name": "",
         "x": 80,
-        "y": 1080,
+        "y": 1120,
         "wires": [
             []
         ]
@@ -984,10 +984,51 @@
         "ui": "88b1772b3c4a1d59",
         "events": "all",
         "x": 80,
-        "y": 1120,
+        "y": 1160,
         "wires": [
             []
         ]
+    },
+    {
+        "id": "26e9ad8698b68a44",
+        "type": "ui-gauge",
+        "z": "c7000847999bd2cf",
+        "name": "",
+        "group": "b02c2bc5a89b478b",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "gauge",
+        "units": "units",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c"
+            },
+            {
+                "from": "4",
+                "color": "#ffc800"
+            },
+            {
+                "from": "7",
+                "color": "#ea5353"
+            }
+        ],
+        "min": 0,
+        "max": 10,
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 70,
+        "y": 960,
+        "wires": []
     },
     {
         "id": "9e16fe1427c2fd6c",
