@@ -675,18 +675,19 @@
         "order": 0,
         "width": 0,
         "height": 0,
-        "passthru": false,
+        "emulateClick": false,
         "tooltip": "",
         "color": "",
         "bgcolor": "",
         "className": "",
         "icon": "",
+        "iconPosition": "left",
         "payload": "",
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
         "x": 70,
-        "y": 640,
+        "y": 680,
         "wires": [
             []
         ]
@@ -704,6 +705,8 @@
         "height": 0,
         "passthru": true,
         "multiple": false,
+        "chips": false,
+        "clearable": false,
         "options": [
             {
                 "label": "",
@@ -716,7 +719,7 @@
         "topicType": "msg",
         "className": "",
         "x": 100,
-        "y": 680,
+        "y": 760,
         "wires": [
             []
         ]
@@ -745,7 +748,7 @@
         "topicType": "msg",
         "className": "",
         "x": 100,
-        "y": 720,
+        "y": 800,
         "wires": [
             []
         ]
@@ -765,13 +768,17 @@
         "outs": "all",
         "topic": "topic",
         "topicType": "msg",
-        "thumbLabel": false,
+        "thumbLabel": "false",
+        "showTicks": "false",
         "min": 0,
         "max": 10,
         "step": 1,
+        "color": "",
+        "colorTrack": "",
+        "colorThumb": "",
         "className": "",
         "x": 70,
-        "y": 760,
+        "y": 840,
         "wires": [
             []
         ]
@@ -800,7 +807,7 @@
         "officon": "",
         "offcolor": "",
         "x": 70,
-        "y": 800,
+        "y": 880,
         "wires": [
             []
         ]
@@ -823,7 +830,7 @@
         "color": "#000000",
         "className": "",
         "x": 70,
-        "y": 840,
+        "y": 920,
         "wires": []
     },
     {
@@ -837,8 +844,12 @@
         "chartType": "line",
         "category": "topic",
         "categoryType": "msg",
+        "xAxisLabel": "",
         "xAxisProperty": "",
         "xAxisType": "linear",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "yAxisLabel": "",
         "yAxisProperty": "",
         "ymin": "",
         "ymax": "",
@@ -863,7 +874,7 @@
         "height": 0,
         "className": "",
         "x": 70,
-        "y": 920,
+        "y": 1000,
         "wires": [
             []
         ]
@@ -880,7 +891,7 @@
         "content": "# Markdown Content\n\nGoes here...",
         "className": "",
         "x": 90,
-        "y": 1040,
+        "y": 1120,
         "wires": [
             []
         ]
@@ -903,7 +914,7 @@
         "templateScope": "local",
         "className": "",
         "x": 80,
-        "y": 1080,
+        "y": 1160,
         "wires": [
             []
         ]
@@ -920,10 +931,14 @@
         "height": 0,
         "maxrows": 0,
         "autocols": true,
+        "showSearch": false,
+        "selectionType": "none",
         "columns": [],
         "x": 70,
-        "y": 880,
-        "wires": []
+        "y": 960,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "d57a721e9cd519d4",
@@ -942,7 +957,7 @@
         "className": "",
         "name": "",
         "x": 110,
-        "y": 1000,
+        "y": 1080,
         "wires": []
     },
     {
@@ -971,7 +986,7 @@
         "ui": "88b1772b3c4a1d59",
         "name": "",
         "x": 80,
-        "y": 1120,
+        "y": 1200,
         "wires": [
             []
         ]
@@ -984,7 +999,7 @@
         "ui": "88b1772b3c4a1d59",
         "events": "all",
         "x": 80,
-        "y": 1160,
+        "y": 1240,
         "wires": [
             []
         ]
@@ -1002,6 +1017,7 @@
         "gstyle": "needle",
         "title": "gauge",
         "units": "units",
+        "icon": "",
         "prefix": "",
         "suffix": "",
         "segments": [
@@ -1027,7 +1043,107 @@
         "styleGlow": false,
         "className": "",
         "x": 70,
-        "y": 960,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "b086b0cdc918bafa",
+        "type": "ui-file-input",
+        "z": "c7000847999bd2cf",
+        "group": "b02c2bc5a89b478b",
+        "name": "",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "topic": "topic",
+        "topicType": "msg",
+        "label": "File Input",
+        "icon": "paperclip",
+        "allowMultiple": false,
+        "accept": "",
+        "className": "",
+        "x": 80,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "eb49cd68d86c5654",
+        "type": "ui-button-group",
+        "z": "c7000847999bd2cf",
+        "name": "",
+        "group": "b02c2bc5a89b478b",
+        "order": 0,
+        "width": 6,
+        "height": 1,
+        "label": "button group",
+        "rounded": true,
+        "useThemeColors": true,
+        "passthru": false,
+        "options": [
+            {
+                "label": "First",
+                "icon": "",
+                "value": "option_0",
+                "valueType": "str",
+                "color": "#009933"
+            },
+            {
+                "label": "Second",
+                "icon": "",
+                "value": "option_1",
+                "valueType": "str",
+                "color": "#999999"
+            }
+        ],
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 90,
+        "y": 720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "92b50b2a07fac419",
+        "type": "inject",
+        "z": "c7000847999bd2cf",
+        "name": "",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 410,
+        "y": 180,
+        "wires": [
+            [
+                "5ffb02328a26a5fa"
+            ]
+        ]
+    },
+    {
+        "id": "5ffb02328a26a5fa",
+        "type": "debug",
+        "z": "c7000847999bd2cf",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 580,
+        "y": 180,
         "wires": []
     },
     {
