@@ -133,14 +133,10 @@
         "type": "inject",
         "z": "c1a3c735442e864b",
         "g": "dc0e2f9084900d58",
-        "name": "",
+        "name": "timestamp",
         "props": [
             {
                 "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
             }
         ],
         "repeat": "",
@@ -148,8 +144,8 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "",
-        "payloadType": "date",
+        "payload": "{\"other\":true,\"string\":\"string\",\"null\":null,\"number\":1234567890}",
+        "payloadType": "json",
         "x": 140,
         "y": 100,
         "wires": [
@@ -1104,47 +1100,6 @@
         "wires": [
             []
         ]
-    },
-    {
-        "id": "92b50b2a07fac419",
-        "type": "inject",
-        "z": "c7000847999bd2cf",
-        "name": "",
-        "props": [
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "x": 410,
-        "y": 180,
-        "wires": [
-            [
-                "5ffb02328a26a5fa"
-            ]
-        ]
-    },
-    {
-        "id": "5ffb02328a26a5fa",
-        "type": "debug",
-        "z": "c7000847999bd2cf",
-        "name": "debug 1",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 580,
-        "y": 180,
-        "wires": []
     },
     {
         "id": "9e16fe1427c2fd6c",
