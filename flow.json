@@ -588,7 +588,7 @@
         "id": "ac87a00171b4dbc9",
         "type": "ui-form",
         "z": "c7000847999bd2cf",
-        "name": "",
+        "name": "form",
         "group": "b02c2bc5a89b478b",
         "label": "",
         "order": 0,
@@ -630,6 +630,7 @@
         "topicType": "msg",
         "splitLayout": "",
         "className": "",
+        "dropdownOptions": [],
         "x": 70,
         "y": 560,
         "wires": [
@@ -641,7 +642,7 @@
         "type": "ui-text-input",
         "z": "c7000847999bd2cf",
         "group": "b02c2bc5a89b478b",
-        "name": "",
+        "name": "text input",
         "label": "text",
         "order": 0,
         "width": 0,
@@ -649,13 +650,19 @@
         "topic": "",
         "topicType": "str",
         "mode": "text",
+        "tooltip": "",
         "delay": "",
         "passthru": true,
         "sendOnDelay": false,
         "sendOnBlur": true,
         "sendOnEnter": true,
         "className": "",
-        "x": 70,
+        "clearable": false,
+        "sendOnClear": false,
+        "icon": "",
+        "iconPosition": "left",
+        "iconInnerPosition": "inside",
+        "x": 80,
         "y": 600,
         "wires": [
             []
@@ -666,7 +673,7 @@
         "type": "ui-button",
         "z": "c7000847999bd2cf",
         "group": "b02c2bc5a89b478b",
-        "name": "",
+        "name": "button",
         "label": "button",
         "order": 0,
         "width": 0,
@@ -682,8 +689,18 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
         "x": 70,
-        "y": 680,
+        "y": 720,
         "wires": [
             []
         ]
@@ -693,7 +710,7 @@
         "type": "ui-dropdown",
         "z": "c7000847999bd2cf",
         "group": "b02c2bc5a89b478b",
-        "name": "",
+        "name": "dropdown",
         "label": "Select Option:",
         "tooltip": "",
         "order": 0,
@@ -714,8 +731,10 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 100,
-        "y": 760,
+        "typeIsComboBox": true,
+        "msgTrigger": "onChange",
+        "x": 90,
+        "y": 800,
         "wires": [
             []
         ]
@@ -725,7 +744,7 @@
         "type": "ui-radio-group",
         "z": "c7000847999bd2cf",
         "group": "b02c2bc5a89b478b",
-        "name": "",
+        "name": "radio group",
         "label": "Select Option:",
         "order": 0,
         "width": 0,
@@ -743,8 +762,8 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 100,
-        "y": 800,
+        "x": 90,
+        "y": 840,
         "wires": [
             []
         ]
@@ -754,7 +773,7 @@
         "type": "ui-slider",
         "z": "c7000847999bd2cf",
         "group": "b02c2bc5a89b478b",
-        "name": "",
+        "name": "slider",
         "label": "slider",
         "tooltip": "",
         "order": 0,
@@ -769,12 +788,15 @@
         "min": 0,
         "max": 10,
         "step": 1,
+        "className": "",
+        "iconPrepend": "",
+        "iconAppend": "",
         "color": "",
         "colorTrack": "",
         "colorThumb": "",
-        "className": "",
+        "showTextField": false,
         "x": 70,
-        "y": 840,
+        "y": 880,
         "wires": [
             []
         ]
@@ -783,17 +805,20 @@
         "id": "1c21a4514ae0eec9",
         "type": "ui-switch",
         "z": "c7000847999bd2cf",
-        "name": "",
+        "name": "switch",
         "label": "switch",
         "group": "b02c2bc5a89b478b",
         "order": 0,
         "width": 0,
         "height": 0,
         "passthru": true,
+        "decouple": false,
         "topic": "topic",
         "topicType": "msg",
         "style": "",
         "className": "",
+        "layout": "",
+        "clickableArea": "switch",
         "onvalue": "true",
         "onvalueType": "bool",
         "onicon": "",
@@ -803,7 +828,7 @@
         "officon": "",
         "offcolor": "",
         "x": 70,
-        "y": 880,
+        "y": 920,
         "wires": [
             []
         ]
@@ -816,7 +841,7 @@
         "order": 0,
         "width": 0,
         "height": 0,
-        "name": "",
+        "name": "text",
         "label": "text",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
@@ -824,9 +849,10 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
+        "wrapText": false,
         "className": "",
         "x": 70,
-        "y": 920,
+        "y": 960,
         "wires": []
     },
     {
@@ -834,7 +860,7 @@
         "type": "ui-chart",
         "z": "c7000847999bd2cf",
         "group": "b02c2bc5a89b478b",
-        "name": "",
+        "name": "chart",
         "label": "chart",
         "order": 9007199254740991,
         "chartType": "line",
@@ -842,13 +868,19 @@
         "categoryType": "msg",
         "xAxisLabel": "",
         "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
         "xAxisType": "linear",
         "xAxisFormat": "",
         "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
         "yAxisLabel": "",
         "yAxisProperty": "",
+        "yAxisPropertyType": "property",
         "ymin": "",
         "ymax": "",
+        "bins": "",
+        "stackSeries": false,
         "pointShape": "circle",
         "pointRadius": "",
         "showLegend": true,
@@ -866,11 +898,20 @@
             "#9467bd",
             "#c5b0d5"
         ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
         "width": 0,
         "height": 0,
         "className": "",
+        "interpolation": "linear",
         "x": 70,
-        "y": 1000,
+        "y": 1040,
         "wires": [
             []
         ]
@@ -880,14 +921,14 @@
         "type": "ui-markdown",
         "z": "c7000847999bd2cf",
         "group": "b02c2bc5a89b478b",
-        "name": "",
+        "name": "markdown",
         "order": 0,
         "width": 0,
         "height": 0,
         "content": "# Markdown Content\n\nGoes here...",
         "className": "",
         "x": 90,
-        "y": 1120,
+        "y": 1200,
         "wires": [
             []
         ]
@@ -899,7 +940,7 @@
         "group": "b02c2bc5a89b478b",
         "page": "",
         "ui": "",
-        "name": "",
+        "name": "template",
         "order": 0,
         "width": 0,
         "height": 0,
@@ -910,7 +951,7 @@
         "templateScope": "local",
         "className": "",
         "x": 80,
-        "y": 1160,
+        "y": 1240,
         "wires": [
             []
         ]
@@ -920,7 +961,7 @@
         "type": "ui-table",
         "z": "c7000847999bd2cf",
         "group": "b02c2bc5a89b478b",
-        "name": "",
+        "name": "table",
         "label": "text",
         "order": 0,
         "width": 0,
@@ -930,8 +971,11 @@
         "showSearch": false,
         "selectionType": "none",
         "columns": [],
+        "mobileBreakpoint": "sm",
+        "mobileBreakpointType": "defaults",
+        "action": "append",
         "x": 70,
-        "y": 960,
+        "y": 1000,
         "wires": [
             []
         ]
@@ -949,11 +993,13 @@
         "outputs": 0,
         "allowDismiss": true,
         "dismissText": "Close",
+        "allowConfirm": false,
+        "confirmText": "",
         "raw": false,
         "className": "",
-        "name": "",
-        "x": 110,
-        "y": 1080,
+        "name": "notification",
+        "x": 90,
+        "y": 1120,
         "wires": []
     },
     {
@@ -980,9 +1026,9 @@
         "type": "ui-event",
         "z": "c7000847999bd2cf",
         "ui": "88b1772b3c4a1d59",
-        "name": "",
-        "x": 80,
-        "y": 1200,
+        "name": "event",
+        "x": 70,
+        "y": 1280,
         "wires": [
             []
         ]
@@ -991,11 +1037,11 @@
         "id": "a916d4a8fd74405c",
         "type": "ui-control",
         "z": "c7000847999bd2cf",
-        "name": "",
+        "name": "ui control",
         "ui": "88b1772b3c4a1d59",
         "events": "all",
         "x": 80,
-        "y": 1240,
+        "y": 1320,
         "wires": [
             []
         ]
@@ -1004,7 +1050,7 @@
         "id": "26e9ad8698b68a44",
         "type": "ui-gauge",
         "z": "c7000847999bd2cf",
-        "name": "",
+        "name": "gauge",
         "group": "b02c2bc5a89b478b",
         "order": 0,
         "width": 0,
@@ -1039,7 +1085,7 @@
         "styleGlow": false,
         "className": "",
         "x": 70,
-        "y": 1040,
+        "y": 1080,
         "wires": []
     },
     {
@@ -1047,7 +1093,7 @@
         "type": "ui-file-input",
         "z": "c7000847999bd2cf",
         "group": "b02c2bc5a89b478b",
-        "name": "",
+        "name": "file input",
         "order": 0,
         "width": 0,
         "height": 0,
@@ -1059,7 +1105,7 @@
         "accept": "",
         "className": "",
         "x": 80,
-        "y": 640,
+        "y": 680,
         "wires": [
             []
         ]
@@ -1068,12 +1114,13 @@
         "id": "eb49cd68d86c5654",
         "type": "ui-button-group",
         "z": "c7000847999bd2cf",
-        "name": "",
+        "name": "button group",
         "group": "b02c2bc5a89b478b",
         "order": 0,
         "width": 6,
         "height": 1,
         "label": "button group",
+        "className": "",
         "rounded": true,
         "useThemeColors": true,
         "passthru": false,
@@ -1096,7 +1143,57 @@
         "topic": "topic",
         "topicType": "msg",
         "x": 90,
-        "y": 720,
+        "y": 760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e87864b55a70c4c3",
+        "type": "ui-number-input",
+        "z": "c7000847999bd2cf",
+        "group": "b02c2bc5a89b478b",
+        "name": "number input",
+        "label": "number",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "tooltip": "",
+        "passthru": true,
+        "sendOnBlur": true,
+        "sendOnEnter": true,
+        "className": "",
+        "clearable": false,
+        "icon": "",
+        "iconPosition": "left",
+        "iconInnerPosition": "inside",
+        "spinner": "default",
+        "x": 90,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4e7333b2f559db45",
+        "type": "ui-audio",
+        "z": "c7000847999bd2cf",
+        "group": "b02c2bc5a89b478b",
+        "name": "audio",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "src": "",
+        "autoplay": "off",
+        "loop": "off",
+        "muted": "off",
+        "x": 70,
+        "y": 1160,
         "wires": [
             []
         ]
