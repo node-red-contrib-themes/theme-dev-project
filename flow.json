@@ -26,10 +26,14 @@
     {
         "id": "b218c36c30e09138",
         "type": "subflow",
-        "name": "Subflow 2",
+        "name": "Subflow",
         "info": "",
+        "category": "",
         "in": [],
-        "out": []
+        "out": [],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
     },
     {
         "id": "dc0e2f9084900d58",
